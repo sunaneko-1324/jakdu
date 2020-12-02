@@ -60,6 +60,8 @@ namespace jakdu
             this.asheightsize = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.crop_temp = new System.Windows.Forms.PictureBox();
+            this.scr_able_viewer = new System.Windows.Forms.Panel();
+            this.scroll_check = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.Originalview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Croppedview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crop_temp)).BeginInit();
@@ -367,7 +369,7 @@ namespace jakdu
             // 
             this.crop_temp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crop_temp.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.crop_temp.Location = new System.Drawing.Point(434, 18);
+            this.crop_temp.Location = new System.Drawing.Point(68, 306);
             this.crop_temp.Margin = new System.Windows.Forms.Padding(2);
             this.crop_temp.Name = "crop_temp";
             this.crop_temp.Size = new System.Drawing.Size(60, 60);
@@ -375,12 +377,34 @@ namespace jakdu
             this.crop_temp.TabStop = false;
             this.crop_temp.Visible = false;
             // 
+            // scr_able_viewer
+            // 
+            this.scr_able_viewer.Location = new System.Drawing.Point(11, 18);
+            this.scr_able_viewer.Name = "scr_able_viewer";
+            this.scr_able_viewer.Size = new System.Drawing.Size(210, 210);
+            this.scr_able_viewer.TabIndex = 27;
+            // 
+            // scroll_check
+            // 
+            this.scroll_check.AutoSize = true;
+            this.scroll_check.Checked = true;
+            this.scroll_check.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.scroll_check.Location = new System.Drawing.Point(242, 166);
+            this.scroll_check.Name = "scroll_check";
+            this.scroll_check.Size = new System.Drawing.Size(95, 16);
+            this.scroll_check.TabIndex = 28;
+            this.scroll_check.Text = "Stretch View";
+            this.scroll_check.UseVisualStyleBackColor = true;
+            this.scroll_check.CheckedChanged += new System.EventHandler(this.scroll_check_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(509, 557);
-            this.Controls.Add(this.crop_temp);
+            this.Controls.Add(this.Originalview);
+            this.Controls.Add(this.scroll_check);
+            this.Controls.Add(this.scr_able_viewer);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.asheightsize);
             this.Controls.Add(this.checkBox1);
@@ -410,7 +434,7 @@ namespace jakdu
             this.Controls.Add(this.Croppedview);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Originalview);
+            this.Controls.Add(this.crop_temp);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -457,6 +481,8 @@ namespace jakdu
         private System.Windows.Forms.TextBox asheightsize;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox crop_temp;
+        private System.Windows.Forms.Panel scr_able_viewer;
+        private System.Windows.Forms.CheckBox scroll_check;
     }
 }
 

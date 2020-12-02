@@ -111,12 +111,16 @@ namespace jakdu
             InitializeComponent();
             image_cropper.X_array_max = Int32.Parse(CalcArrayX.Text);
             image_cropper.Y_array_max = Int32.Parse(CalcArrayY.Text);
+
+            
         }
 
         private void Openbutton_Click(object sender, EventArgs e)
         {
             // 이미지 열기 초기설정
             image_cropper opener = new image_cropper();
+            PictureBox scr_able_box = new PictureBox();
+            scr_able_box.Image = image_cropper.original = null;
             string original_image = string.Empty;
             try
             {
@@ -133,6 +137,15 @@ namespace jakdu
                     Originalview.Image = image_cropper.original;
                     opener.xy_size();
                     originalsize.Text = opener.res();
+
+                    scr_able_box.Image = image_cropper.original;
+                    scr_able_box.Height = image_cropper.original.Height;
+                    scr_able_box.Width = image_cropper.original.Width;
+
+                    scr_able_viewer.Controls.Clear();
+                    scr_able_viewer.Controls.Add(scr_able_box);
+                    scr_able_viewer.AutoScroll = true;
+
                 }
             }
             catch(Exception)
@@ -141,7 +154,7 @@ namespace jakdu
                 return;
             }
             image_cropper.isimageadded = true; // 이미지 추가됨 플래그 지정
-            Originalview.SizeMode = PictureBoxSizeMode.StretchImage; // 미리보기 창에 이미지 출력
+            Originalview.SizeMode = PictureBoxSizeMode.StretchImage; // 미리보기 창에 이미지 크기 조절
         }
 
         public void asarraysize_TextChanged(object sender, EventArgs e)
@@ -444,6 +457,20 @@ namespace jakdu
                 {
                     arrayasy.Text = "1";
                 }
+            }
+        }
+
+        private void scroll_check_CheckedChanged(object sender, EventArgs e)
+        {
+            if(scroll_check.Checked == true)
+            {
+                Originalview.Visible = true;
+                scr_able_viewer.Visible = false;
+            }
+            if (scroll_check.Checked == false)
+            {
+                Originalview.Visible = false;
+                scr_able_viewer.Visible = true;
             }
         }
     }

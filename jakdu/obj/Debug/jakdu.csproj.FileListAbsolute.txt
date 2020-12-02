@@ -7,4 +7,3 @@ C:\Users\sunaneko\source\repos\jakdu\jakdu\obj\Debug\jakdu.csproj.GenerateResour
 C:\Users\sunaneko\source\repos\jakdu\jakdu\obj\Debug\jakdu.csproj.CoreCompileInputs.cache
 C:\Users\sunaneko\source\repos\jakdu\jakdu\obj\Debug\jakdu.exe
 C:\Users\sunaneko\source\repos\jakdu\jakdu\obj\Debug\jakdu.pdb
-C:\Users\sunaneko\source\repos\jakdu\jakdu\obj\Debug\jakdu.csprojAssemblyReference.cache
