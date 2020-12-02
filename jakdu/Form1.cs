@@ -70,7 +70,6 @@ namespace jakdu
                 return bmp;
             }
 
-
             public void err_msg()
             {
                 // 오류 창
@@ -107,7 +106,6 @@ namespace jakdu
                 MessageBox.Show("preview before save!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         public Form1()
         {
             InitializeComponent();
@@ -293,8 +291,7 @@ namespace jakdu
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 crop_temp.Image.Save(dialog.FileName, System.Drawing.Imaging.ImageFormat.Png);
-            }
-            
+            }           
         }
 
         private void Saveallimage_Click(object sender, EventArgs e)
@@ -340,34 +337,32 @@ namespace jakdu
                 }
                 all.err_msg_complete();
             }
-
-
         }
 
         private void Upbutton_Click(object sender, EventArgs e)
         {
             if(image_cropper.isimageadded == true)
             {
-            try
-            {
+                try
+                {
                 int arrayY = Int32.Parse(arrayasy.Text);
                 arrayY = arrayY - 1;
                 image_cropper.Y_array = arrayY;
                 arrayasy.Text = arrayY.ToString();
                 ApplyBT_Click(sender, e);
-                if (arrayY < 1)
+                    if (arrayY < 1)
+                    {
+                        arrayasy.Text = "1";
+                    }
+                    else if (arrayY > image_cropper.Y_array_max)
+                    {
+                        arrayasy.Text = image_cropper.Y_array_max.ToString();
+                    }
+                }
+                catch (Exception)
                 {
                     arrayasy.Text = "1";
                 }
-                else if (arrayY > image_cropper.Y_array_max)
-                {
-                    arrayasy.Text = image_cropper.Y_array_max.ToString();
-                }
-            }
-            catch (Exception)
-            {
-                    arrayasy.Text = "1";
-            }
             }
         }
 
