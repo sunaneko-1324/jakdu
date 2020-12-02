@@ -1,0 +1,9 @@
+C:\Users\sunaneko\source\repos\jakdu\jakdu\bin\Debug\jakdu.exe.config
+C:\Users\sunaneko\source\repos\jakdu\jakdu\bin\Debug\jakdu.exe
+C:\Users\sunaneko\source\repos\jakdu\jakdu\bin\Debug\jakdu.pdb
+C:\Users\sunaneko\source\repos\jakdu\jakdu\obj\Debug\jakdu.Form1.resources
+C:\Users\sunaneko\source\repos\jakdu\jakdu\obj\Debug\jakdu.Properties.Resources.resources
+C:\Users\sunaneko\source\repos\jakdu\jakdu\obj\Debug\jakdu.csproj.GenerateResource.cache
+C:\Users\sunaneko\source\repos\jakdu\jakdu\obj\Debug\jakdu.csproj.CoreCompileInputs.cache
+C:\Users\sunaneko\source\repos\jakdu\jakdu\obj\Debug\jakdu.exe
+C:\Users\sunaneko\source\repos\jakdu\jakdu\obj\Debug\jakdu.pdb
